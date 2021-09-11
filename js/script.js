@@ -10,6 +10,7 @@ let numero = '';
 let votoBranco = false;
 let votos = [];
 
+
 function atualizaTela(){
     let etapa = candidatos[etapaAtual];
     let candidato = etapa.candidatos.filter((item)=>{
@@ -28,7 +29,7 @@ function atualizaTela(){
     }else {
         seuVotoPara.style.display = 'block';
         aviso.style.display = 'block';
-        descricao.innerHTML = '<div class="aviso--grande pisca">VOTAÇÃO NULA</div>';
+        descricao.innerHTML = '<div class="pisca">VOTAÇÃO NULA</div>';
     }
 }
 
@@ -90,8 +91,27 @@ function confirma() {
         if(candidatos[etapaAtual] !== undefined) {
             iniciaVotacao();
         } else {
-            document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
+            // document.querySelector('.tela').innerHTML = '<div class="aviso--gigante pisca">FIM</div>';
+            document.getElementById('animation-finish').style.display = 'block';
+            document.getElementById('pos-voto').style.display = 'block';
+            document.getElementById('text-click').click();
+            document.getElementById('button-click').click();
+            setTimeout(function(){
+                document.getElementById('voto-computado').style.visibility = 'visible'
+                document.getElementById('voto-computado').style.opacity = '1'
+       
+            },4000);
             console.log(votos);
+            setTimeout(function(){
+                document.getElementById('animation-finish').style.display = 'none';
+                document.getElementById('pos-voto').style.display = 'none';
+                document.getElementById('loader-box').style.visibility = 'visible'
+                document.getElementById('loader-box').style.opacity = '1'
+                setTimeout(function(){
+                    window.location.reload()
+                },2000)
+            }, 10000)
+        
         }
     }
 }
@@ -118,5 +138,8 @@ function iniciaVotacao() {
     lateral.innerHTML = '';
     numeros.innerHTML = numeroHTML;
 }
+
+
+
 
 iniciaVotacao();

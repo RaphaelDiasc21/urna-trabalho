@@ -1,194 +1,245 @@
 <!DOCTYPE html>
-<html >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Urna Eletrônica</title>
-    </head>
-    <body class="">
-        <div id="loader-box" class="loader-box">
-            <div class="loader">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
-                <div class="fourth"></div>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urna Eletrônica</title>
+  </head>
+  <body class="">
+    <div id="loader-box" class="loader-box">
+      <div class="loader">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="fourth"></div>
+      </div>
+    </div>
+
+    <div id="pos-voto">
+      <h1 id="voto-computado">Voto computado, obrigado !</h1>
+      <div style="display: none" id="animation-finish">
+        <div class="button-anime" id="button-click">
+          <div class="text" id="text-click">Submit</div>
+        </div>
+        <div class="progress-bar"></div>
+        <svg
+          x="0px"
+          y="0px"
+          viewBox="0 0 25 30"
+          style="enable-background: new 0 0 25 30"
+        >
+          <path
+            class="check"
+            class="st0"
+            d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="principal">
+      <div class="urna">
+        <div class="tela">
+          <div class="estrutura">
+            <div class="estrutura-left">
+              <div class="estrutura-1">
+                <span>SEU VOTO</span>
               </div>
-        </div>
-  
-        <div id="pos-voto">
-            <h1 id="voto-computado">Voto computado, obrigado !</h1>
-            <div style="display: none;" id="animation-finish">
-                <div class="button-anime" id="button-click">
-                    <div class="text" id="text-click">Submit</div>
-                  </div>
-                  <div class="progress-bar"></div>
-                  <svg x="0px" y="0px"
-                     viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
-                    <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-                  </svg>
-    
+              <div class="estrutura-2">
+                <span>VEREADOR</span>
+              </div>
+              <div class="estrutura-3">
+                <div class="numero pisca"></div>
+                <div class="numero"></div>
+              </div>
+              <div class="estrutura-4">
+                Nome: FULANO<br />
+                Partido: NOVO<br />
+                Vice-Prefeito: BELTRANO<br />
+              </div>
             </div>
-        </div>
-        
-      <div class="principal">
-          
-        <div class="urna">
-            
-            <div class="tela">
-  
-       
-    
-        
-
-
-                  
-                <div class="estrutura">
-                    <div class="estrutura-left">
-                        <div class="estrutura-1">
-                            <span>SEU VOTO</span>
-                        </div>
-                        <div class="estrutura-2">
-                            <span>VEREADOR</span>
-                        </div>
-                        <div class="estrutura-3">
-                            <div class="numero pisca"></div>
-                            <div class="numero"></div>
-                        </div>
-                        <div class="estrutura-4">
-                            Nome: FULANO<br/>
-                            Partido: NOVO<br/>
-                            Vice-Prefeito: BELTRANO<br/>
-                        </div>
-                    </div>
-                    <div class="estrutura-right">
-                        <div class="estrutura-image">
-                            <img src="Images/hagar.PNG" alt="" />
-                            Prefeito
-                        </div>
-                        <div class="estrutura-image small">
-                            <img src="Images/guy.PNG" alt="" />
-                            Vice-Prefeito
-                        </div>
-                    </div>
-                </div>
-                <div class="d-2">
-                    Aperte a tela: <br/>
-                    CONFIRMA para CONFIRMAR este voto<br/>
-                    CORRIGE para CORRIGIR este voto
-                </div>
+            <div class="estrutura-right">
+              <div class="estrutura-image">
+                <img src="Images/hagar.PNG" alt="" />
+                Prefeito
+              </div>
+              <div class="estrutura-image small">
+                <img src="Images/guy.PNG" alt="" />
+                Vice-Prefeito
+              </div>
             </div>
-            <div class="esquerda">
-                <div class="teclado">
-                    <div class="teclado--linha">
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('1')">1</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('2')">2</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('3')">3</div>
-                    </div>
-                    <div class="teclado--linha">
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('4')">4</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('5')">5</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('6')">6</div>
-                    </div>
-                    <div class="teclado--linha">
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('7')">7</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('8')">8</div>
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('9')">9</div>
-                    </div>
-                    <div class="teclado--linha">
-                        <div class="teclado--botao botao-teclado-numerico" onclick="clicou('0')">0</div>
-                    </div>
-                </div>  
-            </div>
-            <hr style="width: 100% !important;">
-            <div class="teclado--linha-botoes">
-                <div class="teclado--botao botao--branco" onclick="branco()">BRANCO</div>
-                <div class="teclado--botao botao--corrige" onclick="corrige()">CORRIGE</div>
-                <div class="teclado--botao botao--confirma" onclick="confirma()">CONFIRMA</div>
-            </div>
+          </div>
+          <div class="d-2">
+            Aperte a tela: <br />
+            CONFIRMA para CONFIRMAR este voto<br />
+            CORRIGE para CORRIGIR este voto
+          </div>
         </div>
-
+        <div class="esquerda">
+          <div class="teclado">
+            <div class="teclado--linha">
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('1')"
+              >
+                1
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('2')"
+              >
+                2
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('3')"
+              >
+                3
+              </div>
+            </div>
+            <div class="teclado--linha">
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('4')"
+              >
+                4
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('5')"
+              >
+                5
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('6')"
+              >
+                6
+              </div>
+            </div>
+            <div class="teclado--linha">
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('7')"
+              >
+                7
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('8')"
+              >
+                8
+              </div>
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('9')"
+              >
+                9
+              </div>
+            </div>
+            <div class="teclado--linha">
+              <div
+                class="teclado--botao botao-teclado-numerico"
+                onclick="clicou('0')"
+              >
+                0
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <link rel="stylesheet" href="css/style.css" />
-        <script src="js/candidatos.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/anime.min.js"></script>
-        <script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-        crossorigin="anonymous"></script>
-        
-        <script>
-            $('document').ready(function(){
-    setTimeout(function(){
-        document.getElementById('loader-box').style.visibility = 'hidden'
-        document.getElementById('loader-box').style.opacity = '0'
+        <hr style="width: 100% !important" />
+        <div class="teclado--linha-botoes">
+          <div class="teclado--botao botao--branco" onclick="branco()">
+            BRANCO
+          </div>
+          <div class="teclado--botao botao--corrige" onclick="corrige()">
+            CORRIGE
+          </div>
+          <div class="teclado--botao botao--confirma" onclick="confirma()">
+            CONFIRMA
+          </div>
+        </div>
+      </div>
+    </div>
 
-    },1000);
-})
-            
-        var basicTimeline = anime.timeline({
-            autoplay: false
-          });
-        
-          var pathEls = $(".check");
-          for (var i = 0; i < pathEls.length; i++) {
-            var pathEl = pathEls[i];
-            var offset = anime.setDashoffset(pathEl);
-            pathEl.setAttribute("stroke-dashoffset", offset);
-         
-          }
-        
-          basicTimeline
-            .add({
-              targets: ".text",
-              duration: 1,
-              opacity: "0"
-            })
-            .add({
-              targets: ".button-anime",
-              duration: 1300,
-              height: 10,
-              width: 300,
-              backgroundColor: "#2B2D2F",
-              border: "0",
-              borderRadius: 100
-            })
-            .add({
-              targets: ".progress-bar",
-              duration: 2000,
-              width: 300,
-              easing: "linear"
-            })
-            .add({
-              targets: ".button-anime",
-              width: 0,
-              duration: 1
-            })
-            .add({
-              targets: ".progress-bar",
-              width: 80,
-              height: 80,
-              delay: 500,
-              duration: 750,
-              borderRadius: 80,
-              backgroundColor: "#71DFBE"
-            })
-            .add({
-              targets: pathEl,
-              strokeDashoffset: [offset, 0],
-              duration: 200,
-              easing: "easeInOutSine"
-            });
-        
-          $(".button-anime").click(function() {
-            basicTimeline.play();
-          });
-        
-          $(".text").click(function() {
-            basicTimeline.play();
-          });
-        </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/candidatos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
 
-    </body>
+    <script>
+      $("document").ready(function () {
+        setTimeout(function () {
+          document.getElementById("loader-box").style.visibility = "hidden";
+          document.getElementById("loader-box").style.opacity = "0";
+        }, 1000);
+      });
+
+      var basicTimeline = anime.timeline({
+        autoplay: false,
+      });
+
+      var pathEls = $(".check");
+      for (var i = 0; i < pathEls.length; i++) {
+        var pathEl = pathEls[i];
+        var offset = anime.setDashoffset(pathEl);
+        pathEl.setAttribute("stroke-dashoffset", offset);
+      }
+
+      basicTimeline
+        .add({
+          targets: ".text",
+          duration: 1,
+          opacity: "0",
+        })
+        .add({
+          targets: ".button-anime",
+          duration: 1300,
+          height: 10,
+          width: 300,
+          backgroundColor: "#2B2D2F",
+          border: "0",
+          borderRadius: 100,
+        })
+        .add({
+          targets: ".progress-bar",
+          duration: 2000,
+          width: 300,
+          easing: "linear",
+        })
+        .add({
+          targets: ".button-anime",
+          width: 0,
+          duration: 1,
+        })
+        .add({
+          targets: ".progress-bar",
+          width: 80,
+          height: 80,
+          delay: 500,
+          duration: 750,
+          borderRadius: 80,
+          backgroundColor: "#71DFBE",
+        })
+        .add({
+          targets: pathEl,
+          strokeDashoffset: [offset, 0],
+          duration: 200,
+          easing: "easeInOutSine",
+        });
+
+      $(".button-anime").click(function () {
+        basicTimeline.play();
+      });
+
+      $(".text").click(function () {
+        basicTimeline.play();
+      });
+    </script>
+  </body>
 </html>
